@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1><%= @gossip.content %></h1>
+        <p>Auteur : <%= @gossip.author %></p>
+        <a href="/gossips/<%= params[:id] %>/edit">Modifier ce gossip</a>
+        <a href="/gossips/<%= params[:id] %>/delete">Supprimer ce gossip</a>
+        <a href="/">Retour à la liste des gossips</a>
+    </body>
+</html>

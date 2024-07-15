@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1>Editer un Gossip</h1>
+        <form action="/gossips/<%= params[:id] %>/update" method="POST">
+            <label for="author">Auteur : </label><br>
+            <input type="text" id="author" name="author" value="<%= @gossip.author %>"><br>
+            <label for="content">Contenu :</label><br>
+            <textarea id="content" name="content"><%= @gossip.content %></textarea><br>
+            <input type="submit" value="Mettre à jour le gossip">
+        </form>
+        <a href="/">Retour à la liste des gossips</a>
+    </body>
+</html>

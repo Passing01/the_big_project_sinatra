@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1>Mon super site de gossip !</h1>
+        <ul>
+            <% @gossips.each_with_index do |gossip, index| %>
+                <li><%= gossip.content %> - <%= gossip.author %> (<a href="/gossips/<%= index%>/edit">Modifier</a> - <a href="/gossips/<%= index %>/delete">Supprimer</a>)</li>
+            <% end %>
+        </ul>
+        <a href="/gossips/new/">Créer un nouveau gossip</a>
+    </body>
+</html>
